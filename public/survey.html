@@ -1,164 +1,213 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <title>Friend Finder!</title>
-   </head>
-   <body>
-      <div class="container-Fluid p-5 text-center">
-         <h1>Survey Questions</h1>
-      </div>
-      <div class="container">
-          <hr class="p-4">
-         <form>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Friend Finder!</title>
+</head>
+
+<body>
+    <div class="container-Fluid p-5 text-center">
+        <h1>Survey Questions</h1>
+    </div>
+    <div class="container">
+        <hr class="p-4">
+        <form>
             <div class="form-group">
-               <label for="name"><h4>Name (required)</h4></label>
-               <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                <label for="name">
+                    <h4>Name (required)</h4>
+                </label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
             </div>
             <div class="form-group">
-               <label for="photo"><h4>Photo link (required)</h4></label>
-               <input type="text" class="form-control" id="photo" placeholder="Enter a link to a photo of you" required>
+                <label for="photo">
+                    <h4>Photo link (required)</h4>
+                </label>
+                <input type="text" class="form-control" id="photo" placeholder="Enter a link to a photo of you" required>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>1. You prefer Dogs over cats.</h5>
-                  <select class="custom-select mr-sm-2" id="q1">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>1. You prefer Dogs over cats.</h5>
+                    <select class="custom-select mr-sm-2" id="q1">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>2. You prefer DC Comics to Marvel Comics.</h5>
-                  <select class="custom-select mr-sm-2" id="q2">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>2. You prefer DC Comics to Marvel Comics.</h5>
+                    <select class="custom-select mr-sm-2" id="q2">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>3. You think “Field of Dreams” is a great film.</h5>
-                  <select class="custom-select mr-sm-2" id="q3">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>3. You think “Field of Dreams” is a great film.</h5>
+                    <select class="custom-select mr-sm-2" id="q3">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>4. You think camping is a good way to spend a vacation.</h5>
-                  <select class="custom-select mr-sm-2" id="q4">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>4. You think camping is a good way to spend a vacation.</h5>
+                    <select class="custom-select mr-sm-2" id="q4">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>5. You prefer beer to wine.</h5>
-                  <select class="custom-select mr-sm-2" id="q5">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>5. You prefer beer to wine.</h5>
+                    <select class="custom-select mr-sm-2" id="q5">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>6. You prefer Spring to Fall.</h5>
-                  <select class="custom-select mr-sm-2" id="q6">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>6. You prefer Spring to Fall.</h5>
+                    <select class="custom-select mr-sm-2" id="q6">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>7. You prefer comedies to dramas.</h5>
-                  <select class="custom-select mr-sm-2" id="q7">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>7. You prefer comedies to dramas.</h5>
+                    <select class="custom-select mr-sm-2" id="q7">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>8. You prefer board games to video games.</h5>
-                  <select class="custom-select mr-sm-2" id="q8">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>8. You prefer board games to video games.</h5>
+                    <select class="custom-select mr-sm-2" id="q8">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>9. You prefer hot tubs to swimming pools.</h5>
-                  <select class="custom-select mr-sm-2" id="q9">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>9. You prefer hot tubs to swimming pools.</h5>
+                    <select class="custom-select mr-sm-2" id="q9">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
             <div class="form-row align-items-center">
-               <div class="col-auto p-4">
-                  <h5>10. You prefer fiction to non-fiction. </h5>
-                  <select class="custom-select mr-sm-2" id="q10">
-                     <option selected>Choose...</option>
-                     <option value="1">1 (Strongly Disagree)</option>
-                     <option value="2">2</option>
-                     <option value="3">3</option>
-                     <option value="4">4</option>
-                     <option value="5">5 (Strongly Agree)</option>
-                  </select>
-               </div>
+                <div class="col-auto p-4">
+                    <h5>10. You prefer fiction to non-fiction. </h5>
+                    <select class="custom-select mr-sm-2" id="q10">
+                        <option selected>Choose...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
             </div>
-         </form>
-         <button type="submit" class="btn btn-primary" id="add-btn">Submit</button>
-      </div>
-      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <script src="friends.js"></script>
-   </body>
+        </form>
+        <button type="submit" class="btn btn-primary" id="add-btn">Submit</button>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $("#add-btn").on("click", function (event) {
+            event.preventDefault();
+            var newFriend = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+
+            console.log(newFriend);
+
+            $.post("/api/new", newFriend).then(function (data) {
+                console.log(data);
+            });
+        });
+
+              // info gathered on click needs to be pushed to var people array as an object containing information gathered.
+
+              // Once object is created, answers need to be evaluated against other friends to generate best match.
+
+              // Then Modal displays friend match.
+
+    </script>
+</body>
+
 </html>
