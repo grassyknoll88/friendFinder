@@ -1,6 +1,6 @@
 var friends = require("../data/friends.js");
 
-module.exports = function(app) {
+module.exports = function(app, bodyParser) {
   app.get("/api/friends", function(req, res) {
     res.json(friends);
   });
@@ -23,6 +23,7 @@ module.exports = function(app) {
 
   app.post("/api/friends", function(req, res) {
     var newFriend = req.body;
+    newFriend.scores = Array.of(newFriend.scores);
     var winningFriend;
     var lowestScore = 100;
     function add(a, b) {
@@ -30,18 +31,22 @@ module.exports = function(app) {
     }
     for (var i = 0; i < friends.length; i++) {
       var friendScore = friends[i].scores.reduce(add, 0);
-      var newFriendScore = newFriend.scores.reduce(add, 0);
+      var newFriendScore = Array.from(newFriend.scores).reduce(add, 0);
       var scoreDiff = friendScore - newFriendScore;
-      if (scoreDiff < lowestScore) {
+      if (scoreDiff < lowestScore && newFriend.name !== friends[i].name) {
         lowestScore = scoreDiff;
-        winningFriend = friends[i];
+        newFriend.winningFriend = friends[i];
       }
     }
-    console.log(winningFriend);
 
     newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
 
-    console.log(newFriend);
+    console.log(
+      newFriend.name +
+        "'s " +
+        "friend match is: " +
+        newFriend.winningFriend.name
+    );
 
     friends.push(newFriend);
 
