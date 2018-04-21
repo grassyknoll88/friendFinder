@@ -219,7 +219,11 @@
 
             console.log(newFriend);
 
-            $.post("/api/friends", newFriend).then(function (data) {
+            $.post({
+                url: "/api/friends", 
+                data: JSON.stringify(newFriend),
+                contentType: 'application/json'
+            }).then(function (data) {
                 console.log(data);
                 $("#matchPhoto").attr("src", data.winningFriend.photo);
                 $("#matchMessage").text("You're match is " + data.winningFriend.name);
