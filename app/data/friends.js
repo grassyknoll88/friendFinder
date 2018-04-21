@@ -19,3 +19,5 @@ var people = [
     scores: ["5", "3", "4", "2", "4", "3", "2", "3", "2", "4"]
   }
 ];
+
+module.exports = people;

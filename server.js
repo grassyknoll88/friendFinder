@@ -5,10 +5,9 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-require("./routing/apiRoutes");
-require("./routing/htmlRoutes");
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
-// Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

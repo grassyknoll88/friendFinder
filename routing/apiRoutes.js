@@ -1,30 +1,50 @@
-app.get("/api/friends/:friend?", function(req, res) {
-  var chosen = req.params.friends;
+var friends = require("../data/friends.js");
 
-  if (chosen) {
-    console.log(chosen);
+module.exports = function(app) {
+  app.get("/api/friends", function(req, res) {
+    res.json(friends);
+  });
 
+  app.get("/api/friends/:friend?", function(req, res) {
+    var chosen = req.params.friends;
+
+    if (chosen) {
+      console.log(chosen);
+
+      for (var i = 0; i < friends.length; i++) {
+        if (chosen === friends[i].routeName) {
+          return res.json(friends[i]);
+        }
+      }
+      return res.json(false);
+    }
+    return res.json(friends);
+  });
+
+  app.post("/api/friends", function(req, res) {
+    var newFriend = req.body;
+    var winningFriend;
+    var lowestScore = 100;
+    function add(a, b) {
+      return parseInt(a) + parseInt(b);
+    }
     for (var i = 0; i < friends.length; i++) {
-      if (chosen === friends[i].routeName) {
-        return res.json(friends[i]);
+      var friendScore = friends[i].scores.reduce(add, 0);
+      var newFriendScore = newFriend.scores.reduce(add, 0);
+      var scoreDiff = friendScore - newFriendScore;
+      if (scoreDiff < lowestScore) {
+        lowestScore = scoreDiff;
+        winningFriend = friends[i];
       }
     }
-    return res.json(false);
-  }
-  return res.json(friends);
-});
+    console.log(winningFriend);
 
-app.post("/api/new", function(req, res) {
-  // req.body hosts is equal to the JSON post sent from the user
-  // This works because of our body-parser middleware
-  var newFriend = req.body;
-  // Using a RegEx Pattern to remove spaces from newCharacter
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
+    newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
 
-  console.log(newFriend);
+    console.log(newFriend);
 
-  friends.push(newFriend);
+    friends.push(newFriend);
 
-  res.json(newFriend);
-});
+    res.json(newFriend);
+  });
+};
