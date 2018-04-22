@@ -220,7 +220,7 @@
             console.log(newFriend);
 
             $.post({
-                url: "/api/friends", 
+                url: "/api/friends",
                 data: JSON.stringify(newFriend),
                 contentType: 'application/json'
             }).then(function (data) {
