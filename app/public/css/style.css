@@ -1,0 +1,45 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #70a9a1;
+  color: #f6f1d1;
+}
+
+.jumbotron {
+  background-color: #40798c;
+  color: #f6f1d1;
+}
+
+.btn {
+  background-color: #f6f1d1;
+  color: #0b2027;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0b2027;
+  color: #f6f1d1;
+  border: none;
+}
+
+hr.style {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #0b2027;
+  color: #0b2027;
+  text-align: center;
+}
+hr.style:after {
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: #70a9a1;
+}
+
+modal {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #f6f1d1;
+  color: #0b2027;
+}
